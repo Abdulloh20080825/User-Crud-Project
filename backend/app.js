@@ -168,7 +168,7 @@ app.listen(PORT, () => {
 	try {
 		mongoose
 			.connect(
-				'mongodb+srv://abdullohqurbonov332:aqG3au478D5pVODF@crud.d6oib.mongodb.net/?retryWrites=true&w=majority&appName=crud'
+				'mongodb+srv://abdulloh:abu55abu@crud.d6oib.mongodb.net/?retryWrites=true&w=majority&appName=crud'
 			)
 			.then(() => {
 				console.log('DB connected');
