@@ -43,7 +43,7 @@ app.post('/create-user', async (req, res) => {
 			number,
 		});
 		await newUser.save();
-		const accessToken = jwt.sign({ _id: newUser._id }, process.env.JWT_SECRET, {
+		const accessToken = jwt.sign({ _id: newUser._id }, 'ínstagram', {
 			expiresIn: '1d',
 		});
 		return res.json({
@@ -167,7 +167,9 @@ app.get('/get-all-users', async (req, res) => {
 app.listen(PORT, () => {
 	try {
 		mongoose
-			.connect(process.env.MONGO_URL, {})
+			.connect(
+				'mongodb+srv://abdullohqurbonov332:aqG3au478D5pVODF@crud.d6oib.mongodb.net/?retryWrites=true&w=majority&appName=crud'
+			)
 			.then(() => {
 				console.log('DB connected');
 			})
